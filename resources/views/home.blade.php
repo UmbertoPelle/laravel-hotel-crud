@@ -4,7 +4,7 @@
   <ul>
     @foreach ($stanze as $st)
       <li>
-        <a href="#">{{$st -> room_number}}</a>
+        <a href="{{route('stanze-show', $st -> id)}}">{{$st -> room_number}}</a>
       </li>
     @endforeach
   </ul>

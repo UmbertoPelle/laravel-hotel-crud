@@ -12,4 +12,9 @@ class StanzaController extends Controller{
 
     return view('home', compact('stanze'));
   }
+
+  public function show ($id){
+    $stanza = Stanza::findOrFail($id);
+    return view('stanza', compact('stanza'));
+  }
 }
