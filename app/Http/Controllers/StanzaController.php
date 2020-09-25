@@ -17,4 +17,14 @@ class StanzaController extends Controller{
     $stanza = Stanza::findOrFail($id);
     return view('stanza', compact('stanza'));
   }
+
+  public function create() {
+    return view('create-stanza');
+  }
+
+  public function store(Request $request){
+    $data = $request -> all();
+    $stanza = Stanza::create($data);
+    return redirect() -> route('stanze-index');
+  }
 }
