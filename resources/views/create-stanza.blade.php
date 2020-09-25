@@ -21,5 +21,7 @@
     </div>
     <br><br>
     <button type="submit">CREATE NEW CONFIGURAZIONE</button>
-    </form>
+  </form>
+  <a href="{{route('stanze-index')}}">Stanze</a>
+
 @endsection
